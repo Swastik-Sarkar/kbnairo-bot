@@ -14,4 +14,4 @@ https://discord.com/oauth2/authorize?client_id=875371643965423627&scope=bot&perm
 Website ↓<br/>
 http://kbnairo-bot.glitch.me/<br/>
 Community ↓<br/>
-SRY NOT CREATED YET
+https://discord.gg/rw7BJxsFjP
