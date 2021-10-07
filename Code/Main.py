@@ -32,8 +32,7 @@ async def on_message(message):
 async def on_ready():
   await client.change_presence(activity=discord.Game(name="?help"))
   print (f"{client.user} Is Going To Rock On discord")
-  bot.load_extension('dismusic')
-  bot.load_extension('dch')
+  
 
 @client.command(name = 'kick')
 @commands.has_permissions(kick_members = True)
