@@ -19,23 +19,6 @@ client = commands.Bot(command_prefix="?")
 client.remove_command('help')
 
 bot = commands.Bot(command_prefix='?')
-#lavalinknode
-bot.lava_nodes = [ 
-
-  {
-    'host': 'lava.link',
-    'port': 80,
-    'rest_url': f'http://lava.link:80',
-    'identifier': 'MAIN',
-    'password': 'anything',
-    'region': 'singapore'
-  
-  }
-]
-#end↑
-
-
-
 
 @client.event
 async def on_message(message):
