@@ -61,7 +61,7 @@ async def ping(ctx):
 
 @client.command(name='help')
 async def ping(ctx):
-    await ctx.send(f'```.py\nCategory:Utility \n\n?Ping - This command is for Knowing server & bot ping(lattency)\n\n?aboutBot - Details about the bot\n\n?rebootServer - This command reboots the server\n\nCategory : Economy \n ?beg - Then only way to get money here\n?bal - To see your ballance \n ?pay [user] - To pay money to someone \n?slots [ammount] - A gamble game\n ?dep [ammount] - Deposite money to bank \n ?withdraw [ammount] - Withdraw money to wallet\n Cattegory:Others \n ?linksp - Some links and support links. \n Cattegory:Simulator \n ?simtfadat - use this command to know about the simulator \n ?TFA21 - ```')
+    await ctx.send(f'```.py\nCategory:Utility \n\n?Ping - This command is for Knowing server & bot ping(lattency)\n\n?aboutBot - Details about the bot\n\n?rebootServer - This command reboots the server\n\nCategory : Economy \n ?beg - Then only way to get money here\n?bal - To see your ballance \n ?pay [user] - To pay money to someone (it only pays from bank) \n?slots [ammount] - A gamble game\n ?dep [ammount] - Deposite money to bank \n ?withdraw [ammount] - Withdraw money to wallet\n Cattegory:Others \n ?linksp - Some links and support links.```')
 
 
 #12
@@ -96,7 +96,7 @@ async def beg(ctx):
     
 
 
-    earnings = random.randrange(150)
+    earnings = random.randrange(3)
 
     await ctx.send(f"**Nairo gave you {earnings} coins!!**")
 
@@ -278,11 +278,12 @@ async def update_bank(user, change=0,mode = 'wallet'):
     
 @client.event
 async def on_member_join(member):
-    channel = discord.utils.get(member.guild.channels, name='welcome')
+    channel = discord.utils.get(member.guild.channels, name='➜│welcome')
     await channel.send(f'Welcome {member.mention}!  Ready to jam out? See `?help` command for details!')
 
-
-
-
+#tsykoyumi
+@client.command(name='linksp')
+async def ping(ctx):
+    await ctx.send(f'```.py\n\nWebsite -  kbnairo-bot.glitch.me\n \nYouTube(Owner of me:>) - KB SWASTIK FF\n\n Discord - https://discord.gg/rw7BJxsFjP (owner discord server)\n \nGitHub(source code here do not distribute the code ask permission , if you copy then give credits) - github.com/Swastik-Sarkar ```')
 
 client.run('BOT-TOKEN')
