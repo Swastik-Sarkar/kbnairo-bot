@@ -1,4 +1,3 @@
-from replit import db
  #main.py 
 import discord 
 from discord.ext import commands,tasks
